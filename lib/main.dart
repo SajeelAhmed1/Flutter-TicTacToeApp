@@ -9,14 +9,14 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     // MaterialApp app=MaterialApp()
     // return app()
-    return MaterialApp(
+    return const MaterialApp(
       home: homePage(),
-      debugShowCheckedModeBanner: false ,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
