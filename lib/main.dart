@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 // import 'package:my_first_flutter_app/app_button.dart';
 // import 'package:my_first_flutter_app/app_textField.dart';
-import 'package:tictactoe_flutterapp/screens/homepage.dart';
+import 'package:tictactoe_flutterapp/screens/splash.dart';
+import 'package:tictactoe_flutterapp/screens/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,12 +16,24 @@ class MyApp extends StatelessWidget {
     // MaterialApp app=MaterialApp()
     // return app()
     return const MaterialApp(
+      // home: splashScreen(),
       home: homePage(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
+class my extends StatelessWidget {
+  const my({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration:BoxConstraints
+      
+    );
+  }
+}
  // class HomeScreen extends StatelessWidget{
 //   @override
 //   Widget build(BuildContext context) {
