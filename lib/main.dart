@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     // return app()
     return const MaterialApp(
       // home: splashScreen(),
-      home: homePage(),
+      home: homepage(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -29,7 +29,7 @@ class my extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration:BoxConstraints
+      
       
     );
   }

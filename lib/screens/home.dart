@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class homePage extends StatelessWidget {
-  const homePage({Key? key}) : super(key: key);
+class homepage extends StatelessWidget {
+  const homepage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,16 +52,32 @@ class homePage extends StatelessWidget {
             ),
           ],
         ),
-        // Row(
-        //   children: [
-        //     Container(
-        //       height: 120,
-        //       width: 100,
-        //       color: Colors.blue,
-        //     ),
-
-        //   ],
-        // ),
+        Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 120,
+                width: 100,
+                color: Colors.blue,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: Container(
+                  height: 120,
+                  width: 100,
+                  color: Colors.blue,
+                ),
+              ),
+              Container(
+                height: 120,
+                width: 100,
+                color: Colors.blue,
+              ),
+            ],
+          ),
+        ),
       ],
     ));
   }
