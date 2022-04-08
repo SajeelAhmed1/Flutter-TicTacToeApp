@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class homepage extends StatelessWidget {
+class homepage extends StatefulWidget {
   const homepage({Key? key}) : super(key: key);
+
+  @override
+  State<homepage> createState() => _homepageState();
+}
+
+class _homepageState extends State<homepage> {
+  // var c1 = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,31 +60,162 @@ class homepage extends StatelessWidget {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 30),
+          padding: const EdgeInsets.only(top: 50),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 height: 120,
                 width: 100,
-                color: Colors.blue,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                child: Container(
-                  height: 120,
-                  width: 100,
-                  color: Colors.blue,
+                child: Image.asset(
+                  'assets/images/O.png',
                 ),
+              ),
+              Container(
+                padding: const EdgeInsets.only(left: 40, right: 20),
+                height: 120,
+                width: 100,
+                decoration: const BoxDecoration(
+                    border: Border(
+                  left: BorderSide(
+                    //                   <--- left side
+                    color: Color(0xffC5C5C5),
+                    width: 3.0,
+                  ),
+                )),
               ),
               Container(
                 height: 120,
                 width: 100,
-                color: Colors.blue,
+                decoration: const BoxDecoration(
+                    border: Border(
+                  left: BorderSide(
+                    //                   <--- left side
+                    color: Color(0xffC5C5C5),
+                    width: 3.0,
+                  ),
+                )),
               ),
             ],
           ),
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 120,
+              width: 100,
+              decoration: const BoxDecoration(
+                  border: Border(
+                top: BorderSide(
+                  //                   <--- top
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+                bottom: BorderSide(
+                  //                   <--- top
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+              )),
+            ),
+            Container(
+              padding: const EdgeInsets.only(left: 40, right: 20),
+              height: 120,
+              width: 100,
+              decoration: const BoxDecoration(
+                  border: Border(
+                left: BorderSide(
+                  //                   <--- left side
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+                top: BorderSide(
+                  //                   <--- top
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+                bottom: BorderSide(
+                  //                   <--- top
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+              )),
+            ),
+            Container(
+              height: 120,
+              width: 100,
+              decoration: const BoxDecoration(
+                  border: Border(
+                left: BorderSide(
+                  //                   <--- left side
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+                top: BorderSide(
+                  //                   <--- top
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+                bottom: BorderSide(
+                  //                   <--- top
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+              )),
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 120,
+              width: 100,
+            ),
+            Container(
+              padding: const EdgeInsets.only(left: 40, right: 20),
+              height: 120,
+              width: 100,
+              decoration: const BoxDecoration(
+                  border: Border(
+                left: BorderSide(
+                  //                   <--- left side
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+              )),
+            ),
+            Container(
+              height: 120,
+              width: 100,
+              decoration: const BoxDecoration(
+                  border: Border(
+                left: BorderSide(
+                  //                   <--- left side
+                  color: Color(0xffC5C5C5),
+                  width: 3.0,
+                ),
+              )),
+            ),
+          ],
+        ),
+        Spacer(),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 50, right: 15, left: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image.asset(
+                'assets/images/leaderboardbutton.png',
+              ),
+              const Spacer(),
+              Image.asset(
+                'assets/images/refresh.png',
+              ),
+            ],
+          ),
+        )
       ],
     ));
   }
