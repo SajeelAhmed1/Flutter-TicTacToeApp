@@ -8,7 +8,7 @@ class homepage extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage> {
-  // var c1 = 0;
+  Widget c1 = Text(" ");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,16 +60,20 @@ class _homepageState extends State<homepage> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 50),
+          padding: const EdgeInsets.only(top: 40),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: 120,
-                width: 100,
-                child: Image.asset(
-                  'assets/images/O.png',
-                ),
+              GestureDetector(
+                // When the child is tapped, show a snackbar.
+                onTap: () {
+                  setState(() {
+                    c1 = Image.asset(
+                      "assets/images/O.png",
+                    );
+                  });
+                },
+                child: Container(height: 120, width: 100, child: c1),
               ),
               Container(
                 padding: const EdgeInsets.only(left: 40, right: 20),
@@ -210,8 +214,16 @@ class _homepageState extends State<homepage> {
                 'assets/images/leaderboardbutton.png',
               ),
               const Spacer(),
-              Image.asset(
-                'assets/images/refresh.png',
+              GestureDetector(
+                // When the child is tapped, show a snackbar.
+                onTap: () {
+                  setState(() {
+                    c1 = Text(" ");
+                  });
+                },
+                child: Image.asset(
+                  'assets/images/refresh.png',
+                ),
               ),
             ],
           ),
