@@ -9,6 +9,7 @@ class homepage extends StatefulWidget {
 
 class _homepageState extends State<homepage> {
   Widget c1 = Text(" ");
+  Widget c2 = Text("");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,25 +74,42 @@ class _homepageState extends State<homepage> {
                     );
                   });
                 },
-                child: Container(height: 120, width: 100, child: c1),
+                child: Container(
+                    height: 120,
+                    width: 100,
+                    padding: const EdgeInsets.only(top: 30, right: 14),
+                    child: c1),
+              ),
+              GestureDetector(
+                // When the child is tapped, show a snackbar.
+                onTap: () {
+                  setState(() {
+                    c2 = Image.asset(
+                      "assets/images/X.png",
+                    );
+                  });
+                },
+                child: Container(
+                  padding: const EdgeInsets.only(top: 30, right: 14),
+                  height: 120,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                      // color: Colors.amber,
+                      border: Border(
+                    left: BorderSide(
+                      //                   <--- left side
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                  )),
+                  child: c2,
+                ),
               ),
               Container(
-                padding: const EdgeInsets.only(left: 40, right: 20),
                 height: 120,
                 width: 100,
                 decoration: const BoxDecoration(
-                    border: Border(
-                  left: BorderSide(
-                    //                   <--- left side
-                    color: Color(0xffC5C5C5),
-                    width: 3.0,
-                  ),
-                )),
-              ),
-              Container(
-                height: 120,
-                width: 100,
-                decoration: const BoxDecoration(
+                    // color: Color.fromARGB(255, 250, 121, 41),
                     border: Border(
                   left: BorderSide(
                     //                   <--- left side
@@ -206,7 +224,7 @@ class _homepageState extends State<homepage> {
         ),
         Spacer(),
         Padding(
-          padding: const EdgeInsets.only(bottom: 50, right: 15, left: 15),
+          padding: const EdgeInsets.only(bottom: 50, right: 20, left: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -219,6 +237,7 @@ class _homepageState extends State<homepage> {
                 onTap: () {
                   setState(() {
                     c1 = Text(" ");
+                    c2 = Text(" ");
                   });
                 },
                 child: Image.asset(
