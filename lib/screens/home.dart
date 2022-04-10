@@ -8,6 +8,12 @@ class homepage extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage> {
+  var board = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+  ];
+  var res = " ";
   Widget c1 = Text(" ");
   Widget c2 = Text("");
   Widget c3 = Text("");
@@ -86,7 +92,9 @@ class _homepageState extends State<homepage> {
                   setState(() {
                     // player1 ? O : X;
                     c1 = player1 ? O : X;
+                    player1 ? board[0][0] = 1 : board[0][0] = 2;
                     player1 ? player1 = false : player1 = true;
+
                     // c1 = Image.asset(
                     //   "assets/images/O.png",
                     // );
@@ -106,6 +114,7 @@ class _homepageState extends State<homepage> {
                   setState(() {
                     // player1 ? O : X;
                     c2 = player1 ? O : X;
+                    player1 ? board[1][0] = 1 : board[1][0] = 2;
                     player1 ? player1 = false : player1 = true;
                     // c2 = Image.asset(
                     //   "assets/images/X.png",
@@ -134,6 +143,7 @@ class _homepageState extends State<homepage> {
                 onTap: () {
                   setState(() {
                     c3 = player1 ? O : X;
+                    player1 ? board[2][0] = 1 : board[2][0] = 2;
                     player1 ? player1 = false : player1 = true;
                   });
                 },
@@ -167,7 +177,9 @@ class _homepageState extends State<homepage> {
                 setState(() {
                   // player1 ? O : X;
                   c4 = player1 ? O : X;
+                  player1 ? board[0][1] = 1 : board[0][1] = 2;
                   player1 ? player1 = false : player1 = true;
+
                   // c1 = Image.asset(
                   //   "assets/images/O.png",
                   // );
@@ -202,6 +214,7 @@ class _homepageState extends State<homepage> {
                 setState(() {
                   // player1 ? O : X;
                   c5 = player1 ? O : X;
+                  player1 ? board[1][1] = 1 : board[1][1] = 2;
                   player1 ? player1 = false : player1 = true;
                   // c2 = Image.asset(
                   //   "assets/images/X.png",
@@ -234,13 +247,14 @@ class _homepageState extends State<homepage> {
                   child: c5),
             ),
             GestureDetector(
-              //c5
+              //c6
 
               // When the child is tapped, show a snackbar.
               onTap: () {
                 setState(() {
                   // player1 ? O : X;
                   c6 = player1 ? O : X;
+                  player1 ? board[2][1] = 1 : board[2][1] = 2;
                   player1 ? player1 = false : player1 = true;
                   // c2 = Image.asset(
                   //   "assets/images/X.png",
@@ -284,6 +298,7 @@ class _homepageState extends State<homepage> {
                 setState(() {
                   // player1 ? O : X;
                   c7 = player1 ? O : X;
+                  player1 ? board[0][2] = 1 : board[0][2] = 2;
                   player1 ? player1 = false : player1 = true;
                   // c1 = Image.asset(
                   //   "assets/images/O.png",
@@ -304,6 +319,7 @@ class _homepageState extends State<homepage> {
                 setState(() {
                   // player1 ? O : X;
                   c8 = player1 ? O : X;
+                  player1 ? board[1][2] = 1 : board[1][2] = 2;
                   player1 ? player1 = false : player1 = true;
                   // c1 = Image.asset(
                   //   "assets/images/O.png",
@@ -332,6 +348,7 @@ class _homepageState extends State<homepage> {
                 setState(() {
                   // player1 ? O : X;
                   c9 = player1 ? O : X;
+                  player1 ? board[2][2] = 1 : board[2][2] = 2;
                   player1 ? player1 = false : player1 = true;
                   // c1 = Image.asset(
                   //   "assets/images/O.png",
@@ -355,6 +372,7 @@ class _homepageState extends State<homepage> {
             ),
           ],
         ),
+        Text(res),
         Spacer(),
         Padding(
           padding: const EdgeInsets.only(bottom: 50, right: 20, left: 15),
