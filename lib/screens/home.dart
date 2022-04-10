@@ -233,62 +233,125 @@ class _homepageState extends State<homepage> {
                   )),
                   child: c5),
             ),
-            Container(
-              //c6
-              height: 120,
-              width: 100,
-              decoration: const BoxDecoration(
-                  border: Border(
-                left: BorderSide(
-                  //                   <--- left side
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-                top: BorderSide(
-                  //                   <--- top
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-                bottom: BorderSide(
-                  //                   <--- top
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-              )),
+            GestureDetector(
+              //c5
+
+              // When the child is tapped, show a snackbar.
+              onTap: () {
+                setState(() {
+                  // player1 ? O : X;
+                  c6 = player1 ? O : X;
+                  player1 ? player1 = false : player1 = true;
+                  // c2 = Image.asset(
+                  //   "assets/images/X.png",
+                  // );
+                });
+              },
+              child: Container(
+                  //c6
+                  padding: EdgeInsets.only(top: 25),
+                  height: 120,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                      border: Border(
+                    left: BorderSide(
+                      //                   <--- left side
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                    top: BorderSide(
+                      //                   <--- top
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                    bottom: BorderSide(
+                      //                   <--- top
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                  )),
+                  child: c6),
             ),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 120,
-              width: 100,
+            GestureDetector(
+              //c7
+              // When the child is tapped, show a snackbar.
+              onTap: () {
+                setState(() {
+                  // player1 ? O : X;
+                  c7 = player1 ? O : X;
+                  player1 ? player1 = false : player1 = true;
+                  // c1 = Image.asset(
+                  //   "assets/images/O.png",
+                  // );
+                });
+              },
+              child: Container(
+                  //c7
+                  padding: const EdgeInsets.only(top: 25),
+                  height: 120,
+                  width: 100,
+                  child: c7),
             ),
-            Container(
-              padding: const EdgeInsets.only(left: 40, right: 20),
-              height: 120,
-              width: 100,
-              decoration: const BoxDecoration(
-                  border: Border(
-                left: BorderSide(
-                  //                   <--- left side
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-              )),
+            GestureDetector(
+              //c8
+              // When the child is tapped, show a snackbar.
+              onTap: () {
+                setState(() {
+                  // player1 ? O : X;
+                  c8 = player1 ? O : X;
+                  player1 ? player1 = false : player1 = true;
+                  // c1 = Image.asset(
+                  //   "assets/images/O.png",
+                  // );
+                });
+              },
+              child: Container(
+                  //c8
+                  padding: const EdgeInsets.only(top: 25),
+                  height: 120,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                      border: Border(
+                    left: BorderSide(
+                      //                   <--- left side
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                  )),
+                  child: c8),
             ),
-            Container(
-              height: 120,
-              width: 100,
-              decoration: const BoxDecoration(
-                  border: Border(
-                left: BorderSide(
-                  //                   <--- left side
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-              )),
+            GestureDetector(
+              //c9
+              // When the child is tapped, show a snackbar.
+              onTap: () {
+                setState(() {
+                  // player1 ? O : X;
+                  c9 = player1 ? O : X;
+                  player1 ? player1 = false : player1 = true;
+                  // c1 = Image.asset(
+                  //   "assets/images/O.png",
+                  // );
+                });
+              },
+              child: Container(
+                  //c9
+                  padding: const EdgeInsets.only(top: 25),
+                  height: 120,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                      border: Border(
+                    left: BorderSide(
+                      //                   <--- left side
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                  )),
+                  child: c9),
             ),
           ],
         ),
