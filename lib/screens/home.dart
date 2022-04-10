@@ -92,7 +92,7 @@ class _homepageState extends State<homepage> {
                   setState(() {
                     // player1 ? O : X;
                     c1 = player1 ? O : X;
-                    player1 ? board[0][0] = 1 : board[0][0] = 2;
+                    player1 ? board[0][0] = 1 : board[2][0] = 2;
                     player1 ? player1 = false : player1 = true;
                     if (board[0][0] == 1 &&
                         board[1][0] == 1 &&
@@ -131,7 +131,7 @@ class _homepageState extends State<homepage> {
                     } else {
                       if (board[0][0] == 2 &&
                           board[1][0] == 2 &&
-                          board[0][0] == 2) {
+                          board[2][0] == 2) {
                         res = "P2 WINS";
                       } else if (board[0][1] == 2 &&
                           board[1][1] == 2 &&
@@ -189,7 +189,7 @@ class _homepageState extends State<homepage> {
                     player1 ? player1 = false : player1 = true;
                     if (board[0][0] == 1 &&
                         board[1][0] == 1 &&
-                        board[0][0] == 1) {
+                        board[2][0] == 1) {
                       res = "P1 WINS";
                     } else if (board[0][1] == 1 &&
                         board[1][1] == 1 &&
@@ -221,10 +221,11 @@ class _homepageState extends State<homepage> {
                         board[1][1] == 1 &&
                         board[0][2] == 1) {
                       res = "P1 WINS";
+                      //P2WINS_____________
                     } else {
                       if (board[0][0] == 2 &&
                           board[1][0] == 2 &&
-                          board[0][0] == 2) {
+                          board[2][0] == 2) {
                         res = "P2 WINS";
                       } else if (board[0][1] == 2 &&
                           board[1][1] == 2 &&
@@ -289,7 +290,7 @@ class _homepageState extends State<homepage> {
                     player1 ? player1 = false : player1 = true;
                     if (board[0][0] == 1 &&
                         board[1][0] == 1 &&
-                        board[0][0] == 1) {
+                        board[2][0] == 1) {
                       res = "P1 WINS";
                     } else if (board[0][1] == 1 &&
                         board[1][1] == 1 &&
@@ -324,7 +325,7 @@ class _homepageState extends State<homepage> {
                     } else {
                       if (board[0][0] == 2 &&
                           board[1][0] == 2 &&
-                          board[0][0] == 2) {
+                          board[2][0] == 2) {
                         res = "P2 WINS";
                       } else if (board[0][1] == 2 &&
                           board[1][1] == 2 &&
@@ -394,7 +395,7 @@ class _homepageState extends State<homepage> {
                   player1 ? player1 = false : player1 = true;
                   if (board[0][0] == 1 &&
                       board[1][0] == 1 &&
-                      board[0][0] == 1) {
+                      board[2][0] == 1) {
                     res = "P1 WINS";
                   } else if (board[0][1] == 1 &&
                       board[1][1] == 1 &&
@@ -429,7 +430,7 @@ class _homepageState extends State<homepage> {
                   } else {
                     if (board[0][0] == 2 &&
                         board[1][0] == 2 &&
-                        board[0][0] == 2) {
+                        board[2][0] == 2) {
                       res = "P2 WINS";
                     } else if (board[0][1] == 2 &&
                         board[1][1] == 2 &&
@@ -502,7 +503,7 @@ class _homepageState extends State<homepage> {
                   player1 ? player1 = false : player1 = true;
                   if (board[0][0] == 1 &&
                       board[1][0] == 1 &&
-                      board[0][0] == 1) {
+                      board[2][0] == 1) {
                     res = "P1 WINS";
                   } else if (board[0][1] == 1 &&
                       board[1][1] == 1 &&
@@ -537,7 +538,7 @@ class _homepageState extends State<homepage> {
                   } else {
                     if (board[0][0] == 2 &&
                         board[1][0] == 2 &&
-                        board[0][0] == 2) {
+                        board[2][0] == 2) {
                       res = "P2 WINS";
                     } else if (board[0][1] == 2 &&
                         board[1][1] == 2 &&
@@ -613,7 +614,7 @@ class _homepageState extends State<homepage> {
                   player1 ? player1 = false : player1 = true;
                   if (board[0][0] == 1 &&
                       board[1][0] == 1 &&
-                      board[0][0] == 1) {
+                      board[2][0] == 1) {
                     res = "P1 WINS";
                   } else if (board[0][1] == 1 &&
                       board[1][1] == 1 &&
@@ -648,7 +649,7 @@ class _homepageState extends State<homepage> {
                   } else {
                     if (board[0][0] == 2 &&
                         board[1][0] == 2 &&
-                        board[0][0] == 2) {
+                        board[2][0] == 2) {
                       res = "P2 WINS";
                     } else if (board[0][1] == 2 &&
                         board[1][1] == 2 &&
@@ -728,7 +729,7 @@ class _homepageState extends State<homepage> {
                   player1 ? player1 = false : player1 = true;
                   if (board[0][0] == 1 &&
                       board[1][0] == 1 &&
-                      board[0][0] == 1) {
+                      board[2][0] == 1) {
                     res = "P1 WINS";
                   } else if (board[0][1] == 1 &&
                       board[1][1] == 1 &&
@@ -763,7 +764,7 @@ class _homepageState extends State<homepage> {
                   } else {
                     if (board[0][0] == 2 &&
                         board[1][0] == 2 &&
-                        board[0][0] == 2) {
+                        board[2][0] == 2) {
                       res = "P2 WINS";
                     } else if (board[0][1] == 2 &&
                         board[1][1] == 2 &&
@@ -820,7 +821,7 @@ class _homepageState extends State<homepage> {
                   player1 ? player1 = false : player1 = true;
                   if (board[0][0] == 1 &&
                       board[1][0] == 1 &&
-                      board[0][0] == 1) {
+                      board[2][0] == 1) {
                     res = "P1 WINS";
                   } else if (board[0][1] == 1 &&
                       board[1][1] == 1 &&
@@ -855,7 +856,7 @@ class _homepageState extends State<homepage> {
                   } else {
                     if (board[0][0] == 2 &&
                         board[1][0] == 2 &&
-                        board[0][0] == 2) {
+                        board[2][0] == 2) {
                       res = "P2 WINS";
                     } else if (board[0][1] == 2 &&
                         board[1][1] == 2 &&
@@ -920,7 +921,7 @@ class _homepageState extends State<homepage> {
                   player1 ? player1 = false : player1 = true;
                   if (board[0][0] == 1 &&
                       board[1][0] == 1 &&
-                      board[0][0] == 1) {
+                      board[2][0] == 1) {
                     res = "P1 WINS";
                   } else if (board[0][1] == 1 &&
                       board[1][1] == 1 &&
@@ -955,7 +956,7 @@ class _homepageState extends State<homepage> {
                   } else {
                     if (board[0][0] == 2 &&
                         board[1][0] == 2 &&
-                        board[0][0] == 2) {
+                        board[2][0] == 2) {
                       res = "P2 WINS";
                     } else if (board[0][1] == 2 &&
                         board[1][1] == 2 &&
