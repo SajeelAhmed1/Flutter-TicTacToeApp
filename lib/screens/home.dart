@@ -10,6 +10,20 @@ class homepage extends StatefulWidget {
 class _homepageState extends State<homepage> {
   Widget c1 = Text(" ");
   Widget c2 = Text("");
+  Widget c3 = Text("");
+  Widget c4 = Text("");
+  Widget c5 = Text("");
+  Widget c6 = Text("");
+  Widget c7 = Text("");
+  Widget c8 = Text("");
+  Widget c9 = Text("");
+  var player1 = false;
+  Widget X = Image.asset(
+    "assets/images/X.png",
+  );
+  Widget O = Image.asset(
+    "assets/images/O.png",
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,12 +80,16 @@ class _homepageState extends State<homepage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GestureDetector(
+                //c1
                 // When the child is tapped, show a snackbar.
                 onTap: () {
                   setState(() {
-                    c1 = Image.asset(
-                      "assets/images/O.png",
-                    );
+                    // player1 ? O : X;
+                    c1 = player1 ? O : X;
+                    player1 ? player1 = false : player1 = true;
+                    // c1 = Image.asset(
+                    //   "assets/images/O.png",
+                    // );
                   });
                 },
                 child: Container(
@@ -81,12 +99,17 @@ class _homepageState extends State<homepage> {
                     child: c1),
               ),
               GestureDetector(
+                //c2
+
                 // When the child is tapped, show a snackbar.
                 onTap: () {
                   setState(() {
-                    c2 = Image.asset(
-                      "assets/images/X.png",
-                    );
+                    // player1 ? O : X;
+                    c2 = player1 ? O : X;
+                    player1 ? player1 = false : player1 = true;
+                    // c2 = Image.asset(
+                    //   "assets/images/X.png",
+                    // );
                   });
                 },
                 child: Container(
@@ -105,66 +128,113 @@ class _homepageState extends State<homepage> {
                   child: c2,
                 ),
               ),
-              Container(
-                height: 120,
-                width: 100,
-                decoration: const BoxDecoration(
-                    // color: Color.fromARGB(255, 250, 121, 41),
-                    border: Border(
-                  left: BorderSide(
-                    //                   <--- left side
-                    color: Color(0xffC5C5C5),
-                    width: 3.0,
-                  ),
-                )),
-              ),
+              GestureDetector(
+                //c3
+                // When the child is tapped, show a snackbar.
+                onTap: () {
+                  setState(() {
+                    c3 = player1 ? O : X;
+                    player1 ? player1 = false : player1 = true;
+                  });
+                },
+                child: Container(
+                    height: 120,
+                    width: 100,
+                    padding: const EdgeInsets.only(
+                      top: 25,
+                    ),
+                    decoration: const BoxDecoration(
+                        // color: Color.fromARGB(255, 250, 121, 41),
+                        border: Border(
+                      left: BorderSide(
+                        //                   <--- left side
+                        color: Color(0xffC5C5C5),
+                        width: 3.0,
+                      ),
+                    )),
+                    child: c3),
+              )
             ],
           ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 120,
-              width: 100,
-              decoration: const BoxDecoration(
-                  border: Border(
-                top: BorderSide(
-                  //                   <--- top
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-                bottom: BorderSide(
-                  //                   <--- top
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-              )),
+            GestureDetector(
+              //c4
+              // When the child is tapped, show a snackbar.
+              onTap: () {
+                setState(() {
+                  // player1 ? O : X;
+                  c4 = player1 ? O : X;
+                  player1 ? player1 = false : player1 = true;
+                  // c1 = Image.asset(
+                  //   "assets/images/O.png",
+                  // );
+                });
+              },
+              child: Container(
+                //c4
+                padding: EdgeInsets.only(top: 25),
+                height: 120,
+                width: 100,
+                decoration: const BoxDecoration(
+                    border: Border(
+                  top: BorderSide(
+                    //                   <--- top
+                    color: Color(0xffC5C5C5),
+                    width: 3.0,
+                  ),
+                  bottom: BorderSide(
+                    //                   <--- top
+                    color: Color(0xffC5C5C5),
+                    width: 3.0,
+                  ),
+                )),
+                child: c4,
+              ),
+            ),
+            GestureDetector(
+              //c5
+
+              // When the child is tapped, show a snackbar.
+              onTap: () {
+                setState(() {
+                  // player1 ? O : X;
+                  c5 = player1 ? O : X;
+                  player1 ? player1 = false : player1 = true;
+                  // c2 = Image.asset(
+                  //   "assets/images/X.png",
+                  // );
+                });
+              },
+              child: Container(
+                  //c5
+                  padding: const EdgeInsets.only(top: 25, left: 7, right: 7),
+                  height: 120,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                      border: Border(
+                    left: BorderSide(
+                      //                   <--- left side
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                    top: BorderSide(
+                      //                   <--- top
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                    bottom: BorderSide(
+                      //                   <--- top
+                      color: Color(0xffC5C5C5),
+                      width: 3.0,
+                    ),
+                  )),
+                  child: c5),
             ),
             Container(
-              padding: const EdgeInsets.only(left: 40, right: 20),
-              height: 120,
-              width: 100,
-              decoration: const BoxDecoration(
-                  border: Border(
-                left: BorderSide(
-                  //                   <--- left side
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-                top: BorderSide(
-                  //                   <--- top
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-                bottom: BorderSide(
-                  //                   <--- top
-                  color: Color(0xffC5C5C5),
-                  width: 3.0,
-                ),
-              )),
-            ),
-            Container(
+              //c6
               height: 120,
               width: 100,
               decoration: const BoxDecoration(
@@ -238,6 +308,14 @@ class _homepageState extends State<homepage> {
                   setState(() {
                     c1 = Text(" ");
                     c2 = Text(" ");
+                    c3 = Text(" ");
+                    c4 = Text(" ");
+                    c5 = Text(" ");
+                    c6 = Text(" ");
+                    c7 = Text(" ");
+                    c8 = Text(" ");
+                    c9 = Text(" ");
+                    player1 = true;
                   });
                 },
                 child: Image.asset(
