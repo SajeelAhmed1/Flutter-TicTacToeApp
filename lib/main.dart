@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 // import 'package:my_first_flutter_app/app_button.dart';
 // import 'package:my_first_flutter_app/app_textField.dart';
 // import 'package:tictactoe_flutterapp/screens/splash.dart';
-import 'package:tictactoe_flutterapp/screens/home.dart';
-// import 'package:tictactoe_flutterapp/screens/leaderboardpg.dart';
+// import 'package:tictactoe_flutterapp/screens/home.dart';
+import 'package:tictactoe_flutterapp/screens/leaderboardpg.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,21 +18,21 @@ class MyApp extends StatelessWidget {
     // return app()
     return const MaterialApp(
       // home: splashScreen(),
-      home: homepage(),
-      // home: leaderBoard(),
+      // home: homepage(),
+      home: leaderBoard(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class my extends StatelessWidget {
-  const my({Key? key}) : super(key: key);
+// class my extends StatelessWidget {
+//   const my({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container();
+//   }
+// }
  // class HomeScreen extends StatelessWidget{
 //   @override
 //   Widget build(BuildContext context) {

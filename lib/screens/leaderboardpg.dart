@@ -10,7 +10,7 @@ class leaderBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.only(top: 70, left: 25),
+      padding: const EdgeInsets.only(top: 70, left: 25, right: 25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
