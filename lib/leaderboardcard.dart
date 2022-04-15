@@ -15,6 +15,7 @@ class card extends StatelessWidget {
       padding: EdgeInsets.all(10),
       height: 90,
       width: 30,
+      margin: EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: Color(0xffF5F5F5),
         borderRadius: BorderRadius.circular(13),

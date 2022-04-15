@@ -37,8 +37,22 @@ class leaderBoard extends StatelessWidget {
                     fontSize: 30,
                     fontWeight: FontWeight.w900)),
           ),
-          ListView(
+          Expanded(
+              child: ListView(
+
             children: [
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
+              card(),
               card(),
               card(),
               card(),
@@ -49,6 +63,8 @@ class leaderBoard extends StatelessWidget {
 
             // padding: EdgeInsets.all(10),
           )
+          )
+          
         ],
       ),
     ));
