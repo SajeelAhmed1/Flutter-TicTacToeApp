@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tictactoe_flutterapp/screens/leaderboardpg.dart';
 
 class homepage extends StatefulWidget {
   const homepage({Key? key}) : super(key: key);
@@ -8,11 +9,102 @@ class homepage extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage> {
+  var score = [];
   var board = [
     [0, 0, 0],
     [0, 0, 0],
     [0, 0, 0]
   ];
+  void check(board) {
+    if (board[0][0] == 1 && board[1][0] == 1 && board[0][0] == 1) {
+      res = "P1 WINS";
+      score.add(1);
+      print(score);
+      print(board);
+    } else if (board[0][1] == 1 && board[1][1] == 1 && board[2][1] == 1) {
+      res = "P1 WINS";
+      score.add(1);
+      print(score);
+      print(board);
+    } else if (board[0][2] == 1 && board[1][2] == 1 && board[2][2] == 1) {
+      res = "P1 WINS";
+      score.add(1);
+      print(score);
+      print(board);
+    } else if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1) {
+      res = "P1 WINS";
+      score.add(1);
+      print(score);
+      print(board);
+    } else if (board[1][0] == 1 && board[1][1] == 1 && board[1][2] == 1) {
+      res = "P1 WINS";
+      score.add(1);
+      print(score);
+      print(board);
+    }
+    //_________________
+    else if (board[2][0] == 1 && board[2][1] == 1 && board[2][2] == 1) {
+      res = "P1 WINS";
+      score.add(1);
+      print(score);
+      print(board);
+    } else if (board[0][0] == 1 && board[1][1] == 1 && board[2][2] == 1) {
+      res = "P1 WINS";
+      score.add(1);
+      print(score);
+      print(board);
+    } else if (board[2][0] == 1 && board[1][1] == 1 && board[0][2] == 1) {
+      res = "P1 WINS";
+      score.add(1);
+      print(score);
+      print(board);
+    } else {
+      if (board[0][0] == 2 && board[1][0] == 2 && board[2][0] == 2) {
+        res = "P2 WINS";
+        score.add(2);
+        print(score);
+        print(board);
+      } else if (board[0][1] == 2 && board[1][1] == 2 && board[2][1] == 2) {
+        res = "P2 WINS";
+        score.add(2);
+        print(score);
+        print(board);
+      } else if (board[0][2] == 2 && board[1][2] == 2 && board[2][2] == 2) {
+        res = "P2 WINS";
+        score.add(2);
+        print(score);
+        print(board);
+      } else if (board[0][0] == 2 && board[0][1] == 2 && board[0][2] == 2) {
+        res = "P2 WINS";
+        score.add(2);
+        print(score);
+        print(board);
+      } else if (board[1][0] == 2 && board[1][1] == 2 && board[1][2] == 2) {
+        res = "P2 WINS";
+        score.add(2);
+        print(score);
+        print(board);
+      }
+      //_________________
+      else if (board[2][0] == 2 && board[2][1] == 2 && board[2][2] == 2) {
+        res = "P2 WINS";
+        score.add(2);
+        print(score);
+        print(board);
+      } else if (board[0][0] == 2 && board[1][1] == 2 && board[2][2] == 2) {
+        res = "P2 WINS";
+        score.add(2);
+        print(score);
+        print(board);
+      } else if (board[2][0] == 2 && board[1][1] == 2 && board[0][2] == 2) {
+        res = "P2 WINS";
+        score.add(2);
+        print(score);
+        print(board);
+      }
+    }
+  }
+
   var res = " ";
   Widget c1 = Text(" ");
   Widget c2 = Text("");
@@ -94,77 +186,8 @@ class _homepageState extends State<homepage> {
                     c1 = player1 ? O : X;
                     player1 ? board[0][0] = 1 : board[2][0] = 2;
                     player1 ? player1 = false : player1 = true;
-                    if (board[0][0] == 1 &&
-                        board[1][0] == 1 &&
-                        board[0][0] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][1] == 1 &&
-                        board[1][1] == 1 &&
-                        board[2][1] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][2] == 1 &&
-                        board[1][2] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][0] == 1 &&
-                        board[0][1] == 1 &&
-                        board[0][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[1][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[1][2] == 1) {
-                      res = "P1 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 1 &&
-                        board[2][1] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[2][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[0][2] == 1) {
-                      res = "P1 WINS";
-                    } else {
-                      if (board[0][0] == 2 &&
-                          board[1][0] == 2 &&
-                          board[2][0] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][1] == 2 &&
-                          board[1][1] == 2 &&
-                          board[2][1] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][2] == 2 &&
-                          board[1][2] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][0] == 2 &&
-                          board[0][1] == 2 &&
-                          board[0][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[1][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[1][2] == 2) {
-                        res = "P2 WINS";
-                      }
-                      //_________________
-                      else if (board[2][0] == 2 &&
-                          board[2][1] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[2][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[0][2] == 2) {
-                        res = "P2 WINS";
-                      }
-                    }
+                    check(board);
+                   
 
                     // c1 = Image.asset(
                     //   "assets/images/O.png",
@@ -187,78 +210,8 @@ class _homepageState extends State<homepage> {
                     c2 = player1 ? O : X;
                     player1 ? board[1][0] = 1 : board[1][0] = 2;
                     player1 ? player1 = false : player1 = true;
-                    if (board[0][0] == 1 &&
-                        board[1][0] == 1 &&
-                        board[2][0] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][1] == 1 &&
-                        board[1][1] == 1 &&
-                        board[2][1] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][2] == 1 &&
-                        board[1][2] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][0] == 1 &&
-                        board[0][1] == 1 &&
-                        board[0][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[1][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[1][2] == 1) {
-                      res = "P1 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 1 &&
-                        board[2][1] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[2][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[0][2] == 1) {
-                      res = "P1 WINS";
-                      //P2WINS_____________
-                    } else {
-                      if (board[0][0] == 2 &&
-                          board[1][0] == 2 &&
-                          board[2][0] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][1] == 2 &&
-                          board[1][1] == 2 &&
-                          board[2][1] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][2] == 2 &&
-                          board[1][2] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][0] == 2 &&
-                          board[0][1] == 2 &&
-                          board[0][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[1][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[1][2] == 2) {
-                        res = "P2 WINS";
-                      }
-                      //_________________
-                      else if (board[2][0] == 2 &&
-                          board[2][1] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[2][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[0][2] == 2) {
-                        res = "P2 WINS";
-                      }
-                    }
+                    check(board);
+                    
                     // c2 = Image.asset(
                     //   "assets/images/X.png",
                     // );
@@ -288,77 +241,8 @@ class _homepageState extends State<homepage> {
                     c3 = player1 ? O : X;
                     player1 ? board[2][0] = 1 : board[2][0] = 2;
                     player1 ? player1 = false : player1 = true;
-                    if (board[0][0] == 1 &&
-                        board[1][0] == 1 &&
-                        board[2][0] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][1] == 1 &&
-                        board[1][1] == 1 &&
-                        board[2][1] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][2] == 1 &&
-                        board[1][2] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][0] == 1 &&
-                        board[0][1] == 1 &&
-                        board[0][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[1][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[1][2] == 1) {
-                      res = "P1 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 1 &&
-                        board[2][1] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[0][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[2][2] == 1) {
-                      res = "P1 WINS";
-                    } else if (board[2][0] == 1 &&
-                        board[1][1] == 1 &&
-                        board[0][2] == 1) {
-                      res = "P1 WINS";
-                    } else {
-                      if (board[0][0] == 2 &&
-                          board[1][0] == 2 &&
-                          board[2][0] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][1] == 2 &&
-                          board[1][1] == 2 &&
-                          board[2][1] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][2] == 2 &&
-                          board[1][2] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][0] == 2 &&
-                          board[0][1] == 2 &&
-                          board[0][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[1][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[1][2] == 2) {
-                        res = "P2 WINS";
-                      }
-                      //_________________
-                      else if (board[2][0] == 2 &&
-                          board[2][1] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[0][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[2][2] == 2) {
-                        res = "P2 WINS";
-                      } else if (board[2][0] == 2 &&
-                          board[1][1] == 2 &&
-                          board[0][2] == 2) {
-                        res = "P2 WINS";
-                      }
-                    }
+                    check(board);
+                    
                   });
                 },
                 child: Container(
@@ -393,77 +277,8 @@ class _homepageState extends State<homepage> {
                   c4 = player1 ? O : X;
                   player1 ? board[0][1] = 1 : board[0][1] = 2;
                   player1 ? player1 = false : player1 = true;
-                  if (board[0][0] == 1 &&
-                      board[1][0] == 1 &&
-                      board[2][0] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][1] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][1] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][2] == 1 &&
-                      board[1][2] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[0][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[1][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[1][2] == 1) {
-                    res = "P1 WINS";
-                  }
-                  //_________________
-                  else if (board[2][0] == 1 &&
-                      board[2][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[2][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else {
-                    if (board[0][0] == 2 &&
-                        board[1][0] == 2 &&
-                        board[2][0] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][1] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][1] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][2] == 2 &&
-                        board[1][2] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[0][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[1][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[1][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 2 &&
-                        board[2][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[2][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                  }
+                  check(board);
+                  
 
                   // c1 = Image.asset(
                   //   "assets/images/O.png",
@@ -501,77 +316,8 @@ class _homepageState extends State<homepage> {
                   c5 = player1 ? O : X;
                   player1 ? board[1][1] = 1 : board[1][1] = 2;
                   player1 ? player1 = false : player1 = true;
-                  if (board[0][0] == 1 &&
-                      board[1][0] == 1 &&
-                      board[2][0] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][1] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][1] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][2] == 1 &&
-                      board[1][2] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[0][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[1][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[1][2] == 1) {
-                    res = "P1 WINS";
-                  }
-                  //_________________
-                  else if (board[2][0] == 1 &&
-                      board[2][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[2][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else {
-                    if (board[0][0] == 2 &&
-                        board[1][0] == 2 &&
-                        board[2][0] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][1] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][1] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][2] == 2 &&
-                        board[1][2] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[0][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[1][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[1][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 2 &&
-                        board[2][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[2][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                  }
+                  check(board);
+                  
                   // c2 = Image.asset(
                   //   "assets/images/X.png",
                   // );
@@ -612,77 +358,8 @@ class _homepageState extends State<homepage> {
                   c6 = player1 ? O : X;
                   player1 ? board[2][1] = 1 : board[2][1] = 2;
                   player1 ? player1 = false : player1 = true;
-                  if (board[0][0] == 1 &&
-                      board[1][0] == 1 &&
-                      board[2][0] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][1] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][1] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][2] == 1 &&
-                      board[1][2] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[0][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[1][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[1][2] == 1) {
-                    res = "P1 WINS";
-                  }
-                  //_________________
-                  else if (board[2][0] == 1 &&
-                      board[2][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[2][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else {
-                    if (board[0][0] == 2 &&
-                        board[1][0] == 2 &&
-                        board[2][0] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][1] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][1] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][2] == 2 &&
-                        board[1][2] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[0][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[1][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[1][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 2 &&
-                        board[2][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[2][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                  }
+                  check(board);
+                  
                   // c2 = Image.asset(
                   //   "assets/images/X.png",
                   // );
@@ -727,77 +404,8 @@ class _homepageState extends State<homepage> {
                   c7 = player1 ? O : X;
                   player1 ? board[0][2] = 1 : board[0][2] = 2;
                   player1 ? player1 = false : player1 = true;
-                  if (board[0][0] == 1 &&
-                      board[1][0] == 1 &&
-                      board[2][0] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][1] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][1] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][2] == 1 &&
-                      board[1][2] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[0][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[1][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[1][2] == 1) {
-                    res = "P1 WINS";
-                  }
-                  //_________________
-                  else if (board[2][0] == 1 &&
-                      board[2][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[2][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else {
-                    if (board[0][0] == 2 &&
-                        board[1][0] == 2 &&
-                        board[2][0] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][1] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][1] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][2] == 2 &&
-                        board[1][2] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[0][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[1][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[1][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 2 &&
-                        board[2][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[2][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                  }
+                  check(board);
+                  
                   // c1 = Image.asset(
                   //   "assets/images/O.png",
                   // );
@@ -819,77 +427,8 @@ class _homepageState extends State<homepage> {
                   c8 = player1 ? O : X;
                   player1 ? board[1][2] = 1 : board[1][2] = 2;
                   player1 ? player1 = false : player1 = true;
-                  if (board[0][0] == 1 &&
-                      board[1][0] == 1 &&
-                      board[2][0] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][1] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][1] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][2] == 1 &&
-                      board[1][2] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[0][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[1][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[1][2] == 1) {
-                    res = "P1 WINS";
-                  }
-                  //_________________
-                  else if (board[2][0] == 1 &&
-                      board[2][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[2][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else {
-                    if (board[0][0] == 2 &&
-                        board[1][0] == 2 &&
-                        board[2][0] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][1] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][1] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][2] == 2 &&
-                        board[1][2] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[0][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[1][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[1][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 2 &&
-                        board[2][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[2][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                  }
+                  check(board);
+                  
                   // c1 = Image.asset(
                   //   "assets/images/O.png",
                   // );
@@ -919,77 +458,8 @@ class _homepageState extends State<homepage> {
                   c9 = player1 ? O : X;
                   player1 ? board[2][2] = 1 : board[2][2] = 2;
                   player1 ? player1 = false : player1 = true;
-                  if (board[0][0] == 1 &&
-                      board[1][0] == 1 &&
-                      board[2][0] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][1] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][1] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][2] == 1 &&
-                      board[1][2] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[0][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[1][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[1][2] == 1) {
-                    res = "P1 WINS";
-                  }
-                  //_________________
-                  else if (board[2][0] == 1 &&
-                      board[2][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[0][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[2][2] == 1) {
-                    res = "P1 WINS";
-                  } else if (board[2][0] == 1 &&
-                      board[1][1] == 1 &&
-                      board[0][2] == 1) {
-                    res = "P1 WINS";
-                  } else {
-                    if (board[0][0] == 2 &&
-                        board[1][0] == 2 &&
-                        board[2][0] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][1] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][1] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][2] == 2 &&
-                        board[1][2] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[0][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[1][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[1][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                    //_________________
-                    else if (board[2][0] == 2 &&
-                        board[2][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[0][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[2][2] == 2) {
-                      res = "P2 WINS";
-                    } else if (board[2][0] == 2 &&
-                        board[1][1] == 2 &&
-                        board[0][2] == 2) {
-                      res = "P2 WINS";
-                    }
-                  }
+                  check(board);
+                  
                   // c1 = Image.asset(
                   //   "assets/images/O.png",
                   // );
@@ -1013,14 +483,28 @@ class _homepageState extends State<homepage> {
           ],
         ),
         Text(res),
-        Spacer(),
+        const Spacer(),
         Padding(
           padding: const EdgeInsets.only(bottom: 50, right: 20, left: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset(
-                'assets/images/leaderboardbutton.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => leaderBoard(score: score)),
+                  );
+                },
+                child: Container(
+                  height: 80,
+                  width: 220,
+                  padding: const EdgeInsets.only(top: 10, right: 14),
+                  child: Image.asset(
+                    'assets/images/leaderboardbutton.png',
+                  ),
+                ),
               ),
               const Spacer(),
               GestureDetector(

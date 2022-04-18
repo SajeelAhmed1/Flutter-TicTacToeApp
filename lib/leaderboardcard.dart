@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
-class card extends StatelessWidget {
-  const card({Key? key}) : super(key: key);
+class Cardd extends StatelessWidget {
+  // final List<dynamic> score;
+  final text;
+  // const Cardd({Key? key, required this.score,required this.text}) : super(key: key);
+
+  const Cardd({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +15,14 @@ class card extends StatelessWidget {
     Widget O = Image.asset(
       "assets/images/ovec.png",
     );
+    pic(text) {
+      if (text == 1) {
+        return (O);
+      } else {
+        return (X);
+      }
+    }
+
     return Container(
       padding: EdgeInsets.all(10),
       height: 90,
@@ -24,11 +36,11 @@ class card extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-          X,
-          const Padding(
-            padding: EdgeInsets.only(left: 40, right: 115),
+          pic(text),
+          Padding(
+            padding: EdgeInsets.only(left: 40, right: 95),
             child: Text(
-              "Player1",
+              "Player ${text}",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
             ),
           ),
