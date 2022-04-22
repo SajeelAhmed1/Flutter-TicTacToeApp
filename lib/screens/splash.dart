@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tictactoe_flutterapp/screens/home.dart';
 
 class splashScreen extends StatelessWidget {
   const splashScreen({Key? key}) : super(key: key);
@@ -55,8 +56,16 @@ class splashScreen extends StatelessWidget {
                 const SizedBox(
                   height: 153,
                 ),
-                Image.asset(
-                  'assets/images/xogrid.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const homepage()),
+                    );
+                  },
+                  child: Image.asset(
+                    'assets/images/xogrid.png',
+                  ),
                 ),
                 const Spacer(),
                 const Text("P O W E R E D  B Y",

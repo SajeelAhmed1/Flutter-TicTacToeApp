@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tictactoe_flutterapp/screens/leaderboardpg.dart';
+import 'package:tictactoe_flutterapp/screens/splash.dart';
 
 class homepage extends StatefulWidget {
   const homepage({Key? key}) : super(key: key);
@@ -94,7 +95,6 @@ class _homepageState extends State<homepage> {
           board[2][0] != 0 &&
           board[2][1] != 0 &&
           board[2][2] != 0) {
-        
         res = "Draw";
         score.add(3);
       }
@@ -124,13 +124,33 @@ class _homepageState extends State<homepage> {
         body: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        // GestureDetector(
+        //   onTap: () {
+        //     Navigator.push(
+        //       context,
+        //       MaterialPageRoute(builder: (context) => const homepage()),
+        //     );
+        //   },
+        //   child: Image.asset(
+        //     'assets/images/back.png',
+        //   ),
+        // ),
         Padding(
           padding: const EdgeInsets.only(top: 80),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/OBOX.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const splashScreen()),
+                  );
+                },
+                child: Image.asset(
+                  'assets/images/OBOX.png',
+                ),
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 25, right: 25),
