@@ -21,6 +21,16 @@ class _homepageState extends State<homepage> {
     if (board[0][0] == 1 && board[1][0] == 1 && board[2][0] == 1) {
       res = "P1 WINS";
       score.add(1);
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return Dialog(
+              child: Image.asset(
+                "assets/images/p1win.png",
+              ),
+            );
+          });
+      
       // print(score);
       // print(board);
       // mid column
@@ -124,17 +134,6 @@ class _homepageState extends State<homepage> {
         body: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        // GestureDetector(
-        //   onTap: () {
-        //     Navigator.push(
-        //       context,
-        //       MaterialPageRoute(builder: (context) => const homepage()),
-        //     );
-        //   },
-        //   child: Image.asset(
-        //     'assets/images/back.png',
-        //   ),
-        // ),
         Padding(
           padding: const EdgeInsets.only(top: 80),
           child: Row(
